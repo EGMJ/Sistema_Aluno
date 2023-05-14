@@ -1,18 +1,21 @@
 package br.edu.unicid.dao;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import br.edu.unicid.model.Aluno;
+// import java.util.ArrayList;
+// import java.util.List;
+import br.edu.unicid.model.Boletim;
 import br.edu.unicid.util.ConnectionFactory;
 
-public class AlunoDAO {
+public class BoletimDAO {
 	private Connection conn;
 	private PreparedStatement ps;
 	private ResultSet rs; 
-	private Aluno aluno;
+	/**
+	 *
+	 */
+	private Boletim boletim;
 
-	public AlunoDAO() throws Exception {
+	public BoletimDAO() throws Exception {
 		// chama a classe ConnectionFactory e estabele uma conexão
 		try {
 			this.conn = ConnectionFactory.getConnection();
@@ -22,26 +25,19 @@ public class AlunoDAO {
 	}
 
 	// método de salvar
-	public void salvar(Aluno aluno) throws Exception {
-		if (aluno == null)
+	public void salvar(Boletim boletim) throws Exception {
+		if (boletim == null)
 			throw new Exception("O valor passado nao pode ser nulo");
 		try{
-			String SQL = "INSERT INTO " + "testee (rgm, nome, email, dtaNascimento, cpf, uf, celular, municipio, endereco, curso, campus, periodo) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+			String SQL = "INSERT INTO " + "testeboletim (rgm, disciplina, semestre, nota, faltas) values (?,?,?,?,?)";
 
 			ps = conn.prepareStatement(SQL);
 
-			ps.setInt(1, aluno.getRgm());
-			ps.setString(2, aluno.getNome());
-			ps.setString(3, aluno.getEmail());
-			ps.setString(4, aluno.getDtaNascimento());
-			ps.setString(5, aluno.getCpf());
-			ps.setString(6, aluno.getUf());
-			ps.setString(7, aluno.getCelular());
-			ps.setString(8, aluno.getMunicipio());
-			ps.setString(9, aluno.getEndereco());
-			ps.setString(10, aluno.getCurso());
-			ps.setString(11, aluno.getCampus());
-			ps.setString(12, aluno.getPeriodo());
+			ps.setInt(1, boletim.getRgm());
+			ps.setString(2, boletim.getDisciplina());
+			ps.setString(3, boletim.getSemestre());
+			ps.setDouble(4, boletim.getNota());
+			ps.setInt(5, boletim.getFaltas());
 				
 			ps.executeUpdate();
 		}catch (SQLException sqle) {
@@ -52,21 +48,20 @@ public class AlunoDAO {
 	}
 
 	// método de atualizar
-// 	public void atualizar(Aluno aluno) throws Exception {
-// 		if (aluno == null)
+// 	public void atualizar(Boletim boletim) throws Exception {
+// 		if (boletim == null)
 // 			throw new Exception("O valor passado nao pode ser nulo");
 // 		try {
-// 			String SQL = "UPDATE tbAluno set nome=?, "
-// 					+ "email=?, dtaNascimento=?, "
-// 					+ "idadeAluno=?, endereco=? "
+// 			String SQL = "UPDATE tb_notas_faltas set disciplina=?, "
+// 					+ "semestre=?, nota=?, "
+// 					+ "faltas=?"
 // 					+ "WHERE rgm = ?";
 // 			ps = conn.prepareStatement(SQL);
-// 			ps.setString(1, aluno.getNome());
-// 			ps.setString(2, aluno.getEmail());
-// 			ps.setString(3, aluno.getDtaNascimento());
-// 			ps.setInt(4, aluno.getIdade());
-// 			ps.setString(5, aluno.getEndereco());
-// 			ps.setInt(6, aluno.getRgm());
+// 			ps.setString(1, aluno.getDisciplina());
+// 			ps.setString(2, aluno.getsemestre());
+// 			ps.setString(3, aluno.getnota());
+// 			ps.setInt(4, aluno.getfaltas());
+// 			ps.setInt(5, aluno.getRgm());
 // 			ps.executeUpdate();
 // 		} catch (SQLException sqle) {
 // 			throw new Exception("Erro ao alterar dados " + sqle);
