@@ -627,8 +627,8 @@ public class TelaPrincipal extends JFrame {
 
 		btnSalvar = new JButton("");
 		btnSalvar.setBackground(new Color(246, 245, 244));
-		ImageIcon save = new ImageIcon(this.getClass().getResource("/save.png"));
-		btnSalvar.setIcon(save);
+		// ImageIcon save = new ImageIcon(this.getClass().getResource("/save.png"));
+		btnSalvar.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/save.png"));
 		btnSalvar.setBounds(31, 285, 80, 80);
 		btnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -691,8 +691,8 @@ public class TelaPrincipal extends JFrame {
 
 		btnConsultar = new JButton("");
 		btnConsultar.setBackground(new Color(246, 245, 244));
-		ImageIcon search = new ImageIcon(this.getClass().getResource("/search.png"));
-		btnConsultar.setIcon(search);
+		// ImageIcon search = new ImageIcon(this.getClass().getResource("/search.png"));
+		btnConsultar.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/search.png"));
 		btnConsultar.setBounds(190, 285, 80, 80);
 		btnConsultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -740,8 +740,8 @@ public class TelaPrincipal extends JFrame {
 
 		btnAlterar = new JButton("");
 		btnAlterar.setBackground(new Color(246, 245, 244));
-		ImageIcon refresh = new ImageIcon(this.getClass().getResource("/refresh.png"));
-		btnAlterar.setIcon(refresh);
+		//ImageIcon refresh = new ImageIcon(this.getClass().getResource("/refresh.png"));
+		btnAlterar.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/refresh.png"));
 		btnAlterar.setBounds(339, 285, 80, 80);
 		btnAlterar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -781,8 +781,8 @@ public class TelaPrincipal extends JFrame {
 
 		btnExcluir = new JButton("");
 		btnExcluir.setBackground(new Color(246, 245, 244));
-		ImageIcon delete = new ImageIcon(this.getClass().getResource("/delete.png"));
-		btnExcluir.setIcon(delete);
+		//ImageIcon delete = new ImageIcon(this.getClass().getResource("/delete.png"));
+		btnExcluir.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/delete.png"));
 		btnExcluir.setBounds(511, 285, 80, 80);
 		btnExcluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -804,8 +804,8 @@ public class TelaPrincipal extends JFrame {
 
 		btnSair = new JButton("");
 		btnSair.setBackground(new Color(246, 245, 244));
-		ImageIcon list = new ImageIcon(this.getClass().getResource("/list.png"));
-		btnSair.setIcon(list);
+		//ImageIcon list = new ImageIcon(this.getClass().getResource("/list.png"));
+		btnSair.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/list.png"));
 		btnSair.setBounds(651, 285, 80, 80);
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -916,7 +916,7 @@ public class TelaPrincipal extends JFrame {
 
 		btnSalvarNotas = new JButton("");
 		btnSalvarNotas.setBackground(new Color(248, 248, 242));
-		btnSalvarNotas.setIcon(save);
+		btnSalvarNotas.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/save.png"));
 
 		btnSalvarNotas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1019,13 +1019,13 @@ public class TelaPrincipal extends JFrame {
 
 			}
 		});
-		btnConsultarNotas.setIcon(search);
+		btnConsultarNotas.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/search.png"));
 		btnConsultarNotas.setBounds(208, 282, 80, 80);
 		notas_faltas.add(btnConsultarNotas);
 
 		btnAlterarNotas = new JButton("");
 		btnAlterarNotas.setBackground(new Color(248, 248, 242));
-		btnAlterarNotas.setIcon(refresh);
+		btnAlterarNotas.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/refresh.png"));
 		btnAlterarNotas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -1036,7 +1036,7 @@ public class TelaPrincipal extends JFrame {
 
 		btnExcluirNotas = new JButton("");
 		btnExcluirNotas.setBackground(new Color(248, 248, 242));
-		btnExcluirNotas.setIcon(delete);
+		btnExcluirNotas.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/delete.png"));
 		btnExcluirNotas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -1047,7 +1047,7 @@ public class TelaPrincipal extends JFrame {
 
 		btnSairNotas = new JButton("");
 		btnSairNotas.setBackground(new Color(248, 248, 242));
-		btnSairNotas.setIcon(list);
+		btnSairNotas.setIcon(new ImageIcon("/home/egmj/Projects/Java_Projects/Sistema_Aluno/img/list.png"));
 		btnSairNotas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
